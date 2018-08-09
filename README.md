@@ -20,3 +20,6 @@ Dependencies:
 1) voicebox
 
 Acknowledgement: Thanks to Will Dwinnell for providing Mutual Information code.
+
+
+Dictionary used in code (see demo.m) is the left singular vector matrix of the pooled frames of bird vocalization regions of the training spectrogram. (Files not included due to licensing issues) 
