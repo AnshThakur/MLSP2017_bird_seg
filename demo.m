@@ -4,7 +4,7 @@ addpath('voicebox');
 [x fs]=audioread('test_h.wav');
 %% calculate spectrogram
 [t,f,ps]=calculateSpectrogram(x,fs);
-%% load SVD dictionary (left singular vectors)
+%% load SVD dictionary (left singular vectors) obtained from the pooled frames of bird vocalization regions of a training spectrogram
 load Dict;
 Dict=U(:,1:5); %% choosing top 5 left singular vectors
 %% compute features
@@ -18,12 +18,13 @@ cof=softmax(cof); %% obtaining categorical multinoulli distribution estimates fo
 H=normalize(1-H,0,1);
 H=smooth(H,10);
 H=[0;H];
-ind=find(H>0.08);
+%% thresholding, should be tune manually
+ind=find(H>0.08); 
 [r c]=size(H);
 res=zeros(r,1);
 res(ind)=1;
 
-%%
+%% plots
 figure;
 subplot(3,1,1);
 spgrambw(x,fs,'J',90.5/2);
