@@ -1,6 +1,6 @@
 # MLSP2017_bird_seg
-"RENYI ENTROPY BASED MUTUAL INFORMATION FOR SEMI-SUPERVISED BIRD
-VOCALIZATION SEGMENTATION"
+RENYI ENTROPY BASED MUTUAL INFORMATION FOR SEMI-SUPERVISED BIRD
+VOCALIZATION SEGMENTATION
 
 A semi-supervised algorithm to segment bird vocalizations using matrix factorization and
 Renyi entropy based mutual information is implemented. 
